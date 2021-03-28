@@ -1,0 +1,8 @@
+<p>catalogue works!</p>
+
+<br/>
+<button (click)="onClickBackeng()"> Voir les articles </button>
+
+<div  *ngFor = "let o of observable5$ | async">
+    {{o.titre}} / {{o.prix}} - <button (click)="addPanier(o.ref)">Ajout Panier</button> <button (click)="delPanier(o.ref)">Del Panier</button> <a [routerLink] = "['../detail/',o.ref]" > detail </a>
+</div>

@@ -1,0 +1,11 @@
+<p>detail works!</p>
+
+<div *ngIf="ref != ''">
+    <p>Vous avez sélectionné la reférence : {{ref}}</p>
+</div>
+
+<div *ngIf="ref == ''">
+    <p>Vous n'avez rien sélectionné !</p>
+</div>
+
+<button (click)="addPanier()" type="button" class="btn btn-primary" [disabled]="ref == ''">Ajout Panier</button>
